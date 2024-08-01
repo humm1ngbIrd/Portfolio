@@ -37,12 +37,73 @@ a{
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(2,1fr);
   justify-items: center;
+  align-items: center;
 }
-
+/* multiline typewriter effect for html p tags which are children of greeting */
 #greeting{
   grid-column: 1/2;
-  font-size: 100px;
 }
+#greeting p {
+  font-size: 6rem;
+  font-family: monospace;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#greeting p:nth-child(1) {
+  animation: typeLine1 2s steps(20, end) forwards;
+}
+
+#greeting p:nth-child(2) {
+  animation: typeLine2 2s steps(20, end) forwards;
+  animation-delay: 2s;
+}
+
+@keyframes typeLine1 {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes typeLine2 {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+/* Add a blinking cursor */
+#greeting p:nth-child(2)::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/*
+#greeting p{
+  font-size: 100px;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+#greeting p:nth-child(1){
+  width: auto;
+  animation: type 2s ;
+}
+#greeting p:nth-child(2){
+  width: auto;
+  animation: type2 1s steps(40,end);
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes type{
+0%{width: 0;}
+99.9%{}
+} */
 #socials{
   grid-column: 2/3;
 }
@@ -51,7 +112,7 @@ a{
   grid-row:2/3;
 }
 header{
-  Padding: 20px; 
+  Padding: 20px;
 }
 
 #socials img{
