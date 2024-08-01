@@ -33,16 +33,39 @@ a{
 }
 
 .about-me{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  justify-items: center;
 }
+
+#greeting{
+  grid-column: 1/2;
+  font-size: 100px;
+}
+#socials{
+  grid-column: 2/3;
+}
+#intro{
+  grid-column: 1/2;
+  grid-row:2/3;
+}
+header{
+  Padding: 20px; 
+}
+
+#socials img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
 /* trying typewriter effect */
-.type {
+/* .type {
   font-family: monospace;
   font-size: 100px;
   color:#0000;
+  padding-bottom: 0;
   background:
     linear-gradient(-90deg,#00DFFC 5px,#0000 0) 10px 0,
     linear-gradient(#00DFFC 0 0) 0 0;
@@ -53,10 +76,12 @@ a{
   animation: 
     b .7s infinite steps(1),   
     t calc(var(--n)*.3s) steps(var(--n)) forwards;
-}
-@keyframes t{
+} */
+
+
+/* @keyframes t{
   from {background-size:0 200%}
 }
 @keyframes b{
   50% {background-position:0 -100%,0 0}
-}
+} */
