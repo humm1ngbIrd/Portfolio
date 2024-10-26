@@ -7,13 +7,15 @@ body{
   background-color: #000000;
   color: #f0f0f0;
   margin:auto 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .top-part{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 20px;
+  /* padding: 20px; */
+  align-content: baseline;
 }
 .main-nav{
   display: flex;
@@ -23,9 +25,17 @@ body{
   padding: 0;
 }
 .main-nav li{
-  padding: 20px;
+  padding: 20px;  
   border-left: #f0f0f0 1px solid;
 }
+
+/*change main nav anchor tag color on hover */
+
+/* .main-nav a:hover{
+  color: #000000 ;
+  background-color: #f0f0f0;
+  border-color: #000000;
+} */
 
 a{
   text-decoration: none;
@@ -39,9 +49,9 @@ a{
   align-items: center;
 }
 /* multiline typewriter effect for html p tags which are children of greeting */
-/* #greeting{
+#greeting{
   grid-column: 1/2;
-} */
+}
 #greeting p {
   font-size: 6rem;
   font-family: monospace;
@@ -86,29 +96,8 @@ a{
 #intro pre{
   font-size: 1rem
 }
-/*
-#greeting p{
-  font-size: 100px;
-  font-family: monospace;
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0;
-}
-#greeting p:nth-child(1){
-  width: auto;
-  animation: type 2s ;
-}
-#greeting p:nth-child(2){
-  width: auto;
-  animation: type2 1s steps(40,end);
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-@keyframes type{
-0%{width: 0;}
-99.9%{}
-} */
-#socials{
+
+#image-and-socials{
   grid-column: 2/3;
 }
 #intro{
@@ -119,34 +108,17 @@ header{
   Padding: 20px;
 }
 
-#socials img{
+#image-and-socials img{
   height: 300px;
   width: 300px;
   border-radius: 50%;
 }
-
-/* trying typewriter effect */
-/* .type {
-  font-family: monospace;
-  font-size: 100px;
-  color:#0000;
-  padding-bottom: 0;
-  background:
-    linear-gradient(-90deg,#00DFFC 5px,#0000 0) 10px 0,
-    linear-gradient(#00DFFC 0 0) 0 0;
-  background-size:calc(var(--n)*1ch) 200%;
-  -webkit-background-clip:padding-box,text;
-  background-clip:padding-box,text;
-  background-repeat:no-repeat;
-  animation: 
-    b .7s infinite steps(1),   
-    t calc(var(--n)*.3s) steps(var(--n)) forwards;
-} */
-
-
-/* @keyframes t{
-  from {background-size:0 200%}
+.fa {
+  padding: 20px;
+  font-size: 30px;  
+  width: 57px;
+  text-align: center;
+  text-decoration: none;
 }
-@keyframes b{
-  50% {background-position:0 -100%,0 0}
-} */
+
+
